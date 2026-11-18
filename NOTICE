@@ -1,0 +1,99 @@
+NOTICE
+======
+
+This repository is a reproduction (derived work) of:
+
+  Julia V. Liss, Mischa von Krause, Lasse Elsemüller, Eva Marie Hunsmann,
+  and Veronika Lerche (2026).
+  "Time to jump: Exploring the distribution of noise in evidence accumulation
+  as a function of time pressure."
+  Cognitive Psychology, 167, 101836.
+
+Original repository:
+  https://github.com/jvliss/time_to_jump
+
+
+1. Upstream licensing
+---------------------
+
+The upstream project is dual-licensed:
+
+  (a) Software / source code — MIT License
+      Copyright (c) 2026 Julia V. Liss, Mischa von Krause, and Lasse Elsemüller
+      Full text: see LICENSE
+
+  (b) Non-software content — Creative Commons Attribution 4.0 International
+      (CC BY 4.0)
+      Copyright (c) 2026 Julia V. Liss, Mischa von Krause, Lasse Elsemüller,
+      Eva Marie Hunsmann, and Veronika Lerche
+      This covers, per the upstream LICENSE_DATA:
+        - behavioral data files (3_simulators/data/, including individual_data/
+          and individual_data_s2/)
+        - codebooks (*_variables_explained.xlsx)
+        - model estimates (estimates_model_comp/, estimates_param_estim/)
+        - trained network checkpoints (checkpoint_ttj_*)
+        - figures and generated images
+      Full text: see LICENSE_DATA
+      or https://creativecommons.org/licenses/by/4.0/legalcode
+
+
+2. What this repository contains
+--------------------------------
+
+This reproduction was produced independently by re-running the authors'
+notebooks and analysis scripts. Files fall into two provenance classes:
+
+  [Upstream-derived, MIT]
+    - model function modules: functions_param_estim.py,
+      functions_model_comp.py, functions_param_estim_s2.py
+    - noise kernel: levy_noise.pyx, levy_noise.c, my_setup.py
+    - analysis scripts: ttj_analyses.Rmd, ttj_analyses_s2.Rmd
+    These are unmodified copies (MD5-identical) or minimally path-adapted
+    copies of the upstream code. MIT terms apply.
+
+  [Reproduction output, produced in this repository]
+    - executed notebooks: *.executed.ipynb
+    - parameter estimates: estimates_*/estimates_*.csv
+    - posterior-predictive simulations, if included: simulates_*.csv
+    - figures: figures/*.png, 1_moni/*.png
+    - rendered reports: ttj_analyses*.html
+    - run logs: _step*.log, _alpha_run.log
+    - trace scripts: _insert_seed*.py, _fix_*.py, _extract_*.py
+    - Chinese summaries: 结论_中文.md, 数值核对表.md
+
+  Note: outputs derived from the authors' empirical data or from their
+  trained networks carry the upstream CC BY 4.0 attribution requirement.
+  Where estimates/figures are derived from upstream data or checkpoints,
+  they are distributed under CC BY 4.0 with the attribution above.
+
+
+3. Attribution requirement
+--------------------------
+
+If you redistribute this repository or any derived estimates/figures,
+you must:
+
+  (a) retain this NOTICE and both LICENSE and LICENSE_DATA;
+  (b) credit the original authors named above;
+  (c) indicate that the material is a reproduction and link to the
+      original repository (https://github.com/jvliss/time_to_jump);
+  (d) not imply the original authors endorse this reproduction.
+
+
+4. Reproduction-specific disclosure
+-----------------------------------
+
+  - This reproduction loads the authors' pre-trained BayesFlow checkpoints
+    and performs inference only; it does NOT retrain the 250-epoch networks.
+  - A fixed random seed (42) was inserted to make inference reproducible.
+  - No model parameters, priors, or simulation functions were altered;
+    only environment/path adaptations and loss-plot safeguards were applied.
+  - See README.md and each module's 结论_中文.md for the full change log.
+
+
+5. No warranty
+--------------
+
+This reproduction is provided "as is", without warranty of any kind, as
+in the upstream MIT and CC BY 4.0 terms. The original authors are not
+responsible for this reproduction.

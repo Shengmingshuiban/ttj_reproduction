@@ -1,0 +1,57 @@
+# ---- 作者资产：体积大 / 非本次复现产出 ----
+# 作者原始仓库（约 430MB）
+time_to_jump-main/
+
+# 论文原文 PDF（Elsevier 版权，不上传）
+*.pdf
+
+# 符号链接容器：git 会顺着链接重复跟踪目标目录，复跑时重建即可
+3_simulators/
+
+# 作者原始数据（约 73MB/份，从原仓库获取）
+data/
+individual_data/
+individual_data_s2/
+ttj_s2_result_empirical_wsy.csv
+
+# SBC 验证中间 pkl（约 149MB/份，可由 notebook 再生成）
+validation_files/
+
+# 作者参考结果（非本次真跑）
+_reference_estimates/
+
+# 作者训练权重（约 38MB，从原仓库获取）
+checkpoint_*/
+
+# ---- 可再生成的大文件 ----
+# 后验预测模拟数据（约 67MB）；若确需版本化，改用 Git LFS：
+#   git lfs track "simulates_*.csv"
+simulates_*/
+
+# 模拟模块生成的中间数据（如需版本化请移除本行）
+# 1_moni/simulate_alpha_behavior.pkl
+# 1_moni/my_sample_paths.pkl
+
+# ---- 编译产物与缓存 ----
+build/
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.ipynb_checkpoints/
+
+# ---- 文档生成中间产物 / 个人文档 ----
+output/
+导师汇报思路.docx
+导师汇报思路.md
+
+# ---- 工具内部目录与工作日志 ----
+.workbuddy/
+*workbuddy*/
+
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,37 @@
+START 2026-11-18 00:47:24
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+
+
+processing file: ttj_analyses.Rmd
+1/22                         
+2/22 [setup]                 
+3/22                         
+4/22 [load_data]             
+5/22                         
+6/22 [mixed]                 
+7/22                         
+8/22 [mixed_groupwise]       
+9/22                         
+10/22 [t_test_timeout]        
+11/22                         
+12/22 [behav_ANOVA]           
+13/22                         
+14/22 [behav_pairwisee]       
+15/22                         
+16/22 [prep_BayesFlow_data]   
+17/22                         
+18/22 [test_directional_alpha]
+19/22                         
+20/22 [ANOVA_params]          
+21/22                         
+22/22 [params_pairwise]       
+output file: ttj_analyses.knit.md
+
+"E:/ANACON~1/Scripts/pandoc" +RTS -K512m -RTS ttj_analyses.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output ttj_analyses.html --lua-filter "C:\Users\Acer\AppData\Local\R\win-library\4.5\rmarkdown\rmarkdown\lua\pagebreak.lua" --lua-filter "C:\Users\Acer\AppData\Local\R\win-library\4.5\rmarkdown\rmarkdown\lua\latex-div.lua" --self-contained --variable bs3=TRUE --section-divs --table-of-contents --toc-depth 2 --variable toc_float=1 --variable toc_selectors=h1,h2 --variable toc_collapsed=1 --variable toc_smooth_scroll=1 --variable toc_print=1 --template "C:\Users\Acer\AppData\Local\R\win-library\4.5\rmarkdown\rmd\h\default.html" --no-highlight --variable highlightjs=1 --variable theme=bootstrap --mathjax --variable "mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "C:\Users\Acer\AppData\Local\Temp\Rtmp2NvsxC\rmarkdown-str48dc18902c2e.html" --variable code_folding=hide --variable code_menu=1 
+
+Output created: ttj_analyses.html
+END 2026-11-18 00:50:07 | elapsed=2min 43s | rc=0
